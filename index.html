@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <title>Spotify Teste</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-wraper">
+            <div class="sidebar__logo">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkey.com%2Fpng%2Ffull%2F190-1907978_spotify-logo-png-white-spotify-logo-white-transparent.png&f=1&nofb=1">
+
+            </div> <!--side bar logo-->
+
+            <div class="sidebar__menu">
+                <a class="sidebar__menu__selecionado" href="#"><i class="iconify" data-icon="el:home"></i> Início</a>
+                <a href="#"><i class="iconify" data-icon="akar-icons:search"></i> Buscar</a>
+                <a href="#"><i class="iconify" data-icon="bx:bx-library"></i> Sua Biblioteca</a>
+
+            </div> <!--side bar menu-->
+
+            <div class="sidebar__menu">
+                <p class="sidebar__menu__title">Playlists</p>
+
+                <div class="sidebar__menu__item">
+                    <div class="sidebar__menu__item__componente">
+                        +
+                    </div>
+                    <span>Criar Playlist</span>
+
+                </div><!--side bar menu itens-->
+                <div class="sidebar__menu__item">
+                    <img src="img/liked-songs-640.png" width="25px">
+                    <span>Músicas Curtidas</span>
+
+                </div><!--side bar menu itens-->
+
+            </div><!--sidebar--menu-->
+
+            <div class="sidebar__playlists">
+                <a href="">Playlist 1</a>
+                <a href="">Playlist 2</a>
+                <a href="">Playlist 3</a>
+                <a href="">Playlist 4</a>
+
+            </div><!--sidebar-playlists-->
+
+        </div><!--side bar wraper-->
+
+    </div> <!-- side bar -->
+
+    <div class="main">
+        <div class="main-wraper">
+            <div class="main__row">
+                <div class="main__row__title"> <h2>Paradas</h2> </div> <!--main row title-->
+
+                <div onclick="upload()" class="main__col" data-image="img/region_global_default.jpg" data-artist="Mais Tocadas do Mundo" data-song="" data-file="./assets/SUAMUSICA.MP3">
+                    <img src="img/region_global_default.jpg" style="width: 230px;">
+                    <h3>As 50 Mais Tocadas do Mundo</h3>
+                    <p>As 50 músicas mais tocadas em todo o Mundo!</p>
+                </div><!--main__col-->
+
+                <div onclick="upload()" class="main__col" data-image="img/region_br_default.jpg" data-artist="Mais Tocadas do Brasil" data-song="" data-file="./assets/SUAMUSICA.MP3">
+                    <img src="img/region_br_default.jpg" style="width: 230px;">
+                    <h3>As 50 Mais Tocadas do Brasil</h3>
+                    <p>As 50 músicas mais tocadas em todo o Brasil!</p>
+                </div><!--main__col-->
+
+                </div><!--main__col-->
+
+            </div><!--main row-->
+
+            <div class="main__row">
+                <div class="main__row__title"> <h2>Mais Tocadas</h2> </div> <!--main row title-->
+
+                <div onclick="upload()" class="main__col" data-image="img/default.jpg" data-artist="Mix de Lil Nas X" data-song="" data-file="./assets/SUAMUSICA.MP3">
+                    <img src="img/default.jpg" style="width: 230px;">
+                    <h3>Mix de Lil Nas X</h3>
+                    <p>Aqui vai a descrição da música</p>
+                </div><!--main__col-->
+
+                <div onclick="upload()" class="main__col" data-image="img/default (1).jpg" data-artist="Mix anos 90" data-song="" data-file="./assets/SUAMUSICA.MP3">
+                    <img src="img/default (1).jpg" style="width: 230px;">
+                    <h3>Mix anos 90</h3>
+                    <p>Aqui vai a descrição da música</p>
+                </div><!--main__col-->
+
+                </div><!--main__col-->
+
+            </div><!--main row-->
+
+        </div><!--main wraper-->
+
+    </div><!--main-->
+
+    <div class="player">
+        <div class="player__artist">
+
+        </div><!--player artist-->
+        <div class="player__control">
+            <div class="player__control__buttons">
+                <a href=""><i class="iconify" data-icon="tabler:player-skip-back"></i></a>
+                <a style="display: none;" id="pauseBtn" href="#"><i class="iconify" data-icon="tabler:player-pause"></i></a>
+                <a id="playBtn" href="#"><i class="iconify" data-icon="tabler:player-play"></i></a>
+                <a href=""><i class="iconify" data-icon="tabler:player-skip-forward"></i></a>
+
+            </div>
+
+            <div class="player__control__progress">
+                <div style="width: 0%;" class="player__control__progress__2">
+
+                </div>
+            </div><!--player control progress-->
+
+        </div><!--player control-->
+
+    </div><!-- player-->
+
+    <audio id="audioplayer" style="position: absolute; left: 0; top: 0; z-index: -999; opacity: 0;" controls="">
+
+    </audio>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
